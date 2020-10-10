@@ -37,18 +37,24 @@ public:
 	StandardDeck& operator=(StandardDeck& other_deck); //Assignment operator overload
 	
 	// Accessors:
-	void ShowDeck(); //displays cards in the deck
-	int CardsRemaining(); //shows remaining number of cards
+	//displays cards in the deck
+	void ShowDeckOfCards();
+	//shows remaining number of cards
+	int CardsRemaining();
 		
 	// Mutators:
-	void Shuffle(); //rearranges cards in deck
+	//rearranges cards in deck
+	void Shuffle();
+	//Sets deck
 	void SetDeck(std::vector <PlayingCard> standard_deck);
+	//draws a random card and removes it from the deck of cards
 	void DrawRandomCard();
-	void DrawNextCard();
+	//draws card and removes it from the deck of cards
+	void DrawNextCard(); 
 
 private:
-	std::vector <PlayingCard> totalCards;
-	bool createDeck;
+	std::vector <PlayingCard> totalCards; //deck of cards
+	bool createDeck; //helps create deck
 };
 
 #endif /* defined (__STANDARD_DECK__) */

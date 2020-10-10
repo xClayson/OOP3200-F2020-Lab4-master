@@ -7,11 +7,13 @@
 #include <ctime>
 #include <iostream>
 
+//Default Constructor
 StandardDeck::StandardDeck():createDeck(false)
 {
 	Initialize();
 }
 
+//Initializes Deck of Cards
 void StandardDeck::Initialize()
 {
 	PlayingCard cards;
@@ -19,9 +21,10 @@ void StandardDeck::Initialize()
 
 	if (createDeck == true)
 	{
+		//clears deck of cards
 		totalCards.clear();
 	}
-
+	//creates a loop for 52 cards
 	for (int i = 0; i < 52; i++)
 	{
 		cards = PlayingCard(number, suit, i, true);
@@ -53,6 +56,7 @@ StandardDeck& StandardDeck::operator=(StandardDeck& other_deck)
 	return (*this);
 }
 
+//Displays the card this is drawn. Then removes it from the deck
 void StandardDeck::DrawNextCard()
 {
 	std::cout << totalCards[0].GetRank() << " of " << totalCards[0].GetSuit();
@@ -65,6 +69,8 @@ int StandardDeck::CardsRemaining()
 	return totalCards.size();
 }
 
+//Draws a random card based off of a random number. Shows which card is drawn and
+//removes it from the deck
 void StandardDeck::DrawRandomCard()
 {
 	int randomValue;
@@ -92,7 +98,7 @@ void StandardDeck::Shuffle()
 }
 
 //Method to show all cards in the deck
-void StandardDeck::ShowDeck()
+void StandardDeck::ShowDeckOfCards()
 {
 	for (int i = 0 ; i <= totalCards.size() - 1; i ++)
 	{

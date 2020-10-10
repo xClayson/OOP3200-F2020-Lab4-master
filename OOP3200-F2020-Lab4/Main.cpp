@@ -19,44 +19,49 @@ int main()
 
 	// create a deck
 	StandardDeck standard_deck;
-	std::cout << "Deck is Created" << std::endl;
-	std::cout << "_______________" << std::endl;
+	std::cout << "     Deck is Created     " << std::endl;
+	std::cout << "_________________________" << std::endl;
 	
 	// Show the deck object as initialized
-	standard_deck.ShowDeck();
+	standard_deck.ShowDeckOfCards();
 	Pause();
 	
 	// Draw the next card and show it
+	std::cout << "________________" << std::endl;
 	std::cout << "\nDraw Next Card" << std::endl;
-	std::cout << "______________" << std::endl;
+	std::cout << "________________" << std::endl;
 	standard_deck.DrawNextCard();
 	Pause();
 
 	// Draw a random card and show it
+	std::cout << "__________________" << std::endl;
 	std::cout << "\nDraw Random Card" << std::endl;
 	std::cout << "__________________" << std::endl;
 	standard_deck.DrawRandomCard();
 	Pause();
 	
 	// Show the deck with the remaining cards
+	std::cout << "__________________" << std::endl;
 	std::cout << "\nRemaining Cards" << std::endl;
-	std::cout << "_________________" << std::endl;
+	std::cout << "__________________" << std::endl;
 	standard_deck.CardsRemaining();
-	standard_deck.ShowDeck();
+	standard_deck.ShowDeckOfCards();
 	Pause();
 
 	// Shuffle the deck and show the result
+	std::cout << "__________________" << std::endl;
 	std::cout << "\nShuffling Deck" << std:: endl;
-	std::cout << "________________" << std::endl;
+	std::cout << "__________________" << std::endl;
 	standard_deck.Shuffle();
-	standard_deck.ShowDeck();
+	standard_deck.ShowDeckOfCards();
 	Pause();
 
 	// Reset the deck and show the result
+	std::cout << "__________________" << std::endl;
 	std::cout << "\nReset Deck" << std::endl;
-	std::cout << "____________" << std::endl;
+	std::cout << "__________________" << std::endl;
 	standard_deck.Initialize();
-	standard_deck.ShowDeck();
+	standard_deck.ShowDeckOfCards();
 	
 }//end of main
 
